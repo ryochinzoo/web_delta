@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<!--<meta http-equiv="X-Frame-Options" content="allow">-->
+<meta property="og:title" content="DELTAGAMES" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="" />
+<meta property="og:image" content="img/ogp_image.png" />
+<meta name="Author" content="DELTAGAMES.Inc.">
+<meta name="copyright" content="DELTAGAMES.Inc.">
+<meta name="keywords" content="" lang="ja">
+<meta name="description" content="">
+<!--meta tags-->
+
+<title>DELTAGAMES INC.</title>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyALVQ5JANSbeeIB6v-PRdkE5HIBfVh7DSI"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="js/jquery.fullpage.js"></script>
+<script src="js/jquery.easings.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/jquery.fullpage.css">
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="shortcut icon" href="img/favicon.ico" type="image/vnd.microsoft.icon">
+<!--
+<script type="text/javascript">
+if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
+	location.href = './sp/';
+}
+</script>
+-->
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script>
+$(document).ready(function(){
+		$("#home").click(function(){
+			$.fn.fullpage.moveTo(0, 0);
+		});
+		$("#concept").click(function(){
+			$.fn.fullpage.moveTo(0, 1);
+		});
+		$("#about").click(function(){
+			$.fn.fullpage.moveTo(0, 2);
+		});
+		$("#access").click(function(){
+			$.fn.fullpage.moveTo(0, 3);
+		});
+		$("#portfolio").click(function(){
+			$.fn.fullpage.moveTo(0, 4);
+		});
+		$("#recruit").click(function(){
+			$.fn.fullpage.moveTo(0, 5);
+		});
+		$("#others").click(function(){
+			$.fn.fullpage.moveTo(0, 6);
+		});
+});
+(function($) {
+	$(function() {
+		$('#fullpage').fullpage({
+			resize : false
+		});
+	});
+})(jQuery);
+
+function mapInit() {
+    var centerPosition = new google.maps.LatLng(35.6901601, 139.70750739999994);
+    var option = {
+        zoom : 17,
+        center : centerPosition,
+        mapTypeId : google.maps.MapTypeId.ROADMAP
+    };
+
+    //地図本体描画
+    var googlemap = new google.maps.Map(document.getElementById("maps"), option);
+	var marker = new google.maps.Marker({
+		position:centerPosition
+	});
+	marker.setMap(googlemap);
+}
+function resizeMap(){
+	$("#maps").css({height:"100%", width:"100%"});
+}
+	resizeMap();
+    google.maps.event.addDomListener(window, "load", mapInit);
+
+</script>
+</head>
+<body>
+<!--共通部分　ここから-->
+
+<div class="sns">
+	<div style="float:left;"><a href="https://www.facebook.com/deltagames333/" target="_blank"><img src="img/icon_facebook.png" width="50" border="0" /></a></div>
+	<div style="float:left;margin-left:15px;"><a href="https://twitter.com/uesugi_kentarou" target="_blank"><img src="img/icon_twitter.png" width="50" border="0" /></a></div>
+	<div style="clear:both"></div>
+</div>
+<div id="logo" ><img src="img/logo.png" width="150" border="0"></div>
+
+<!--共通部分　ここまで-->
+<div id="fullpage">
+	<div class="section">
+		<div class="slide" data-anchor="home">
+			<div id="welcome"><img src="img/welcome.png" border="0"></div>
+		</div>
+		<div class="slide" data-anchor="concept">
+			<div class="panel">
+				test
+			</div>
+		</div>
+		<div class="slide" data-anchor="about">
+			<div class="panel">
+				about
+			</div>
+		</div>
+		<div class="slide" data-anchor="access">
+			<div id="maps">
+				
+			</div>
+		</div>
+		<div class="slide" data-anchor="portfolio">
+			<div class="panel">
+				portfolio
+			</div>
+		</div>
+		<div class="slide" data-anchor="recruit">
+			<div class="panel">
+				recruit
+			</div>
+		</div>
+		<div class="slide" data-anchor="others">
+			<div class="panel">
+				others
+			</div>
+		</div>
+	</div>
+	<div id="h_wrapper" class="header">
+		<nav>
+			<li class="menu seventy" id="home"><img src="img/menu_home.png" border="0" /></li>
+			<li class="menu seventy" id="concept"><img src="img/menu_concept.png" border="0" /></li>
+			<li class="menu seventy" id="about"><img src="img/menu_about.png" border="0" /></li>
+			<li class="menu seventy" id="access"><img src="img/menu_access.png" border="0" /></li>
+			<li class="menu seventy" id="portfolio"><img src="img/menu_portfolio.png" border="0" /></li>
+			<li class="menu seventy" id="recruit"><img src="img/menu_recruit.png" border="0" /></li>
+			<li class="menu seventy" id="others"><img src="img/menu_others.png" border="0" /></li>
+		
+		</nav>
+	</div>
+</div>
+
+
+
+<div style="clear:both"></div>
+
+</body>
+</html>

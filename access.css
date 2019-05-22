@@ -1,0 +1,14 @@
+body {color:#222; font-family:"メイリオ", Meiryo,sans-serif;line-height:1.6;}
+a{
+	cursor:url(../img/target.png), url(../img/target.cur), pointer;
+}
+table{border-collapse: separate;border-spacing: 0;}
+tr{padding-left:10px;font-size:18px;}
+td{padding:5px 10px 5px 30px;vertical-align: top;}
+.h_td{display:block;width:3px; height:22px;background:#57a4ec; float:left; margin-right:15px;}
+.td_config{width:270px;border-right:2px solid #aaa;clear:both;}
+.t_align{display:inline-block;width:12em;}
+hr{border-style:solid!important;border-color:#999;margin:20px 0; -webkit-margin-befor:0em!important;-webkit-margin-after:0em!important;}
+#maps{
+	margin-left:30px;width:90%; height:400px;text-align:center;
+}
